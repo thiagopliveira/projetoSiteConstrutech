@@ -1,3 +1,12 @@
+<?php
+require_once 'init.php';
+
+print_R ($_POST);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $ids = array_column($_SESSION['produtos'], 'id');
+    $novoId = ids ? max($ids) + 1: 1;
+}
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>

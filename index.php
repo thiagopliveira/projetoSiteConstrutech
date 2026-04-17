@@ -36,7 +36,7 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
                             <button class="<?= $categoria_get == $kcat ? 'ativo' : '' ?>"><?= $nome ?></button>
                         </a>
                     </li>
-                <?php endforeach; ?>
+                <?php  ?>
             </ol>
         </div>
 
