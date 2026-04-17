@@ -54,12 +54,12 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
                 if($categoria_get == '' || $produto['categoria'] == $categoria_get):
             ?>
                 <div class="productRow">
-                    <div><img src="<?= $produto['imagem'] ?>" class="imgProduto" alt="<?= $produto['nome'] ?>"></div>
+                    <div><img src="<?= $produto['imagem'] ?>" class="imgProduto" width="100px" alt="<?= $produto['nome'] ?>"></div>
                     <div><?= $produto['nome'] ?></div>
                     <div>R$ <?= number_format($produto['preco'], 2, ',', '.') ?></div>
                     <div><?= ucfirst($produto['categoria']) ?></div>
                     <div><?= $produto['quantidade'] ?></div>
-                    <div><a href="detalhes-do-produto.php?id=<?php= $produto['id'] ?>">Detalhes</a></div>
+                    <div><a href="detalhes-do-produto.php?id=<?= $produto['id'] ?>">Detalhes</a></div>
                 </div>
             <?php 
                 endif; 
