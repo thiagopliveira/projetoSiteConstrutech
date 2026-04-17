@@ -28,7 +28,6 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
             <ol>
                 <li><a href="index.php"><button class="<?= $categoria_get == '' ? 'ativo' : '' ?>">Todos</button></a></li>
                 <?php foreach($categorias as $kcat => $nome) {
-    // Note os pontos de concatenação corretos aqui:
     echo '<a href="index.php?categoria=' . $kcat . '">' . $nome . '</a>';
 } ?>
                     <li>
@@ -36,7 +35,7 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
                             <button class="<?= $categoria_get == $kcat ? 'ativo' : '' ?>"><?= $nome ?></button>
                         </a>
                     </li>
-                <?php endforeach; ?>
+                <?php  ?>
             </ol>
         </div>
 
@@ -60,7 +59,7 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
                     <div>R$ <?= number_format($produto['preco'], 2, ',', '.') ?></div>
                     <div><?= ucfirst($produto['categoria']) ?></div>
                     <div><?= $produto['quantidade'] ?></div>
-                    <div><a href="Produto-detalhes.php?id=<?= $produto['id'] ?>">Detalhes</a></div>
+                    <div><a href="detalhes-do-produto.php?id=<?php= $produto['id'] ?>">Detalhes</a></div>
                 </div>
             <?php 
                 endif; 

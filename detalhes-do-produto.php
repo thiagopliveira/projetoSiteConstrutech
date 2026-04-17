@@ -1,3 +1,18 @@
+<?php
+require_once 'init.php';
+
+$id = isset($_GET['id']) ? (int) $_GET['id']: 0;
+$ids = array_column($_SESSION['produtos'], 'id');
+$index = array_search($id,$ids);
+if ($index !== false) {
+    $produto = $_SESSION['produtos'][$index];
+} else {
+    header('location: 404.php');
+    exit();
+}
+$produto = $_SESSION['produtos'][$index]; 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +21,10 @@
     <title>Document</title>
 </head>
 <body>
+    <?php
+    require_once 'partials/header.php';
+    require_once 'partials/sideBar.php';
+    ?>
     <main>
         <img src="<?php $produto['imagem'] ?>" alt="">
         <div class="caracdoproduto">
