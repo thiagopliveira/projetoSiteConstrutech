@@ -1,6 +1,7 @@
 <?php
 require_once 'init.php';
-// Define a categoria atual para saber qual botão marcar como "ativo"
+
+// categoria ativa
 $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 ?>
 <!DOCTYPE html>
@@ -12,67 +13,113 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <?php require_once 'partials/header.php'; ?>
-    <?php require_once 'partials/sideBar.php'; ?>
 
-    <?php if (isset($_GET['produtoadd']) && $_GET['produtoadd'] === '1'): ?>
-        <p class="aviso">Produto adicionado com sucesso!!!</p>
-    <?php endif; ?>
+<?php require_once 'partials/header.php'; ?>
+<?php require_once 'partials/sideBar.php'; ?>
 
-    <main class="boxMain">
-        <div class="titleBox">
-            <h1 class="titleBox">Aba de Produtos</h1>
+<?php if (isset($_GET['produtoadd']) && $_GET['produtoadd'] === '1'): ?>
+    <p class="aviso">Produto adicionado com sucesso!!!</p>
+<?php endif; ?>
+
+<?php if (isset($_GET['removido'])): ?>
+    <p class="aviso-removido">Estoque atualizado!</p>
+<?php endif; ?>
+
+<main class="boxMain">
+
+    <!-- TÍTULO -->
+    <div class="titleBox">
+        <h1>Aba de Produtos</h1>
+    </div>
+
+    <!-- FILTROS -->
+    <div class="filtros">
+
+        <a href="index.php">
+            <button class="<?= $categoria_get == '' ? 'ativo' : '' ?>">
+                Todos
+            </button>
+        </a>
+
+        <?php foreach($categorias as $kcat => $nome): ?>
+            <a href="index.php?categoria=<?= $kcat ?>">
+                <button class="<?= $categoria_get == $kcat ? 'ativo' : '' ?>">
+                    <?= $nome ?>
+                </button>
+            </a>
+        <?php endforeach; ?>
+
+    </div>
+
+    <!-- HEADER -->
+    <div class="subtitleContainer">
+        <h2>Produto</h2>
+        <h2>Preço</h2>
+        <h2>Tipo</h2>
+        <h2>Quantidade</h2>
+        <h2>Ações</h2>
+    </div>
+
+    <!-- LISTA -->
+    <div class="products">
+
+        <?php foreach($_SESSION['produtos'] as $produto): ?>
+        <?php if($categoria_get == '' || $produto['categoria'] == $categoria_get): ?>
+
+        <div class="productRow">
+
+            <!-- PRODUTO (imagem + nome juntos) -->
+            <div class="produto-info">
+                <img src="<?= $produto['imagem'] ?>" class="imgProduto">
+                <span><?= $produto['nome'] ?></span>
+            </div>
+
+            <!-- PREÇO -->
+            <div>
+                R$ <?= number_format($produto['preco'], 2, ',', '.') ?>
+            </div>
+
+            <!-- TIPO -->
+            <div>
+                <?= ucfirst($produto['categoria']) ?>
+            </div>
+
+            <!-- QUANTIDADE -->
+            <div class="quantidade">
+                <?= $produto['quantidade'] ?>
+
+                <?php if ($produto['quantidade'] < 3): ?>
+                    <span class="baixo-estoque">Baixo estoque</span>
+                <?php endif; ?>
+            </div>
+
+            <!-- AÇÕES -->
+            <div class="acoes">
+                <a href="detalhes-do-produto.php?id=<?= $produto['id'] ?>">
+                    Detalhes
+                </a>
+
+                <a href="remove.php?id=<?= $produto['id'] ?>" class="remover">
+                    -1 Estoque
+                </a>
+            </div>
+
         </div>
 
-        <div class="abaProdutos">
-            <ol>
-                <li><a href="index.php"><button class="<?= $categoria_get == '' ? 'ativo' : '' ?>">Todos</button></a></li>
-                <?php foreach($categorias as $kcat => $nome) {
-    echo '<a href="index.php?categoria=' . $kcat . '">' . $nome . '</a>';
-} ?>
-                    <li>
-                        <a href="index.php?categoria=<?= $kcat ?>">
-                            <button class="<?= $categoria_get == $kcat ? 'ativo' : '' ?>"><?= $nome ?></button>
-                        </a>
-                    </li>
-                <?php  ?>
-            </ol>
-        </div>
+        <?php endif; ?>
+        <?php endforeach; ?>
 
-        <div class="subtitleContainer">
-            <h2>Produto</h2>
-            <h2>Preço</h2>
-            <h2>Tipo</h2>
-            <h2>Quantidade</h2>
-        </div>
+    </div>
 
-        <div class="products">
-            <?php 
-            // Usamos a variável global que vem do seu data.php (ou $_SESSION)
-            foreach($_SESSION['produtos'] as $produto):
-                // Lógica de Filtro
-                if($categoria_get == '' || $produto['categoria'] == $categoria_get):
-            ?>
-                <div class="productRow">
-                    <div><img src="<?= $produto['imagem'] ?>" class="imgProduto" width="100px" alt="<?= $produto['nome'] ?>"></div>
-                    <div><?= $produto['nome'] ?></div>
-                    <div>R$ <?= number_format($produto['preco'], 2, ',', '.') ?></div>
-                    <div><?= ucfirst($produto['categoria']) ?></div>
-                    <div><?= $produto['quantidade'] ?></div>
-                    <div><a href="detalhes-do-produto.php?id=<?= $produto['id'] ?>">Detalhes</a></div>
-                </div>
-            <?php 
-                endif; 
-            endforeach; 
-            ?>
-        </div>
+    <!-- BOTÃO -->
+    <div class="botoes-gerais">
+        <a href="form.php" class="btn">Adicionar Novo</a>
+    </div>
+    <a href="reset.php" class="btn">Resetar Estoque</a>
 
-        <div class="botoes-gerais">
-            <a href="form.php" class="btn">Adicionar Novo</a>
-        </div>
-    </main>
-    <?php 
-    require_once 'partials/footer.php';
-    ?>
+</main>
+
+<?php require_once 'partials/footer.php'; ?>
+
 </body>
 </html>

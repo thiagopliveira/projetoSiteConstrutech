@@ -1,10 +1,23 @@
 <?php
 require_once 'init.php';
 
-print_R ($_POST);
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $ids = array_column($_SESSION['produtos'], 'id');
-    $novoId = ids ? max($ids) + 1: 1;
+    $novoId = $ids ? max($ids) + 1 : 1;
+
+    // exemplo simples de salvar (ajuste conforme seu sistema)
+    $_SESSION['produtos'][] = [
+        'id' => $novoId,
+        'nome' => $_POST['nome'],
+        'preco' => $_POST['preco'],
+        'descricao' => $_POST['descricao'],
+        'quantidade' => $_POST['quantidade'],
+        'categoria' => $_POST['categoria'],
+        'imagem' => $_POST['imagem']
+    ];
+
+    header("Location: index.php?produtoadd=1");
+    exit;
 }
 ?>
 <!DOCTYPE html>
@@ -12,59 +25,68 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Gerenciamento de estoque construtech</title>
+    <title>Adicionar Produto</title>
     <link rel="stylesheet" href="css/style.css">
-  
 </head>
+
 <body>
-    <?php
-    require_once 'partials/header.php'
-    ?>
-    
-    <?php
-    require_once 'partials/sideBar.php'
-    ?>
-    <main class="titleAddProducts">
-        <div><h1>Adicionar Produto</h1> 
-</div>
-    <main class="formProducts">
-        <div>
-    <H1>Formulário de cadastro</h1>
-    <form>
-        <label>Nome do Produto</label>
-        <input type ="text">
-        <br>
-        
-        <label>Valor</label>
-        <input type ="Number">
-        <br>
 
-        <label>Descrição</label>
-        <input type ="text">
-        <br>
+<?php require_once 'partials/header.php'; ?>
+<?php require_once 'partials/sideBar.php'; ?>
 
-        <label>Quantidade</label>
-        <input type ="number">
-        <br>
+<main class="boxMain">
 
-        <label>Categoria</label>
-        <input type ="select">
-        <br>
+    <div class="titleBox">
+        <h1>Adicionar Produto</h1>
+    </div>
 
-        <label>Imagem</label>
-        <input type ="image">
-        <br>
+    <div class="formContainer">
+        <form method="POST" class="formProducts">
 
-        
-        <label>Adicionar</label>
-        <input type ="submit">
-        <br>
-        <label>Remover</label>
-        <input type ="submit">
-        <br>
+            <div class="formGroup">
+                <label>Nome do Produto</label>
+                <input type="text" name="nome" required>
+            </div>
 
-    </form> 
-</div>
-    
+            <div class="formGroup">
+                <label>Preço</label>
+                <input type="number" step="0.01" name="preco" required>
+            </div>
+
+            <div class="formGroup">
+                <label>Descrição</label>
+                <textarea name="descricao"></textarea>
+            </div>
+
+            <div class="formGroup">
+                <label>Quantidade</label>
+                <input type="number" name="quantidade" required>
+            </div>
+
+            <div class="formGroup">
+                <label>Categoria</label>
+                <select name="categoria" required>
+                    <?php foreach($categorias as $kcat => $nome): ?>
+                        <option value="<?= $kcat ?>"><?= $nome ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+
+            <div class="formGroup">
+                <label>URL da Imagem</label>
+                <input type="text" name="imagem" placeholder="cole o link da imagem">
+            </div>
+
+            <button type="submit" class="btnSalvar">
+                Salvar Produto
+            </button>
+
+        </form>
+    </div>
+
+</main>
+
+<?php require_once 'partials/footer.php'; ?>
+
 </body>
 </html>
