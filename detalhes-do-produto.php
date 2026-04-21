@@ -5,7 +5,7 @@ require_once 'init.php';
 $id = isset($_GET['id']) ? (int) $_GET['id']: 0;
 
 if(!isset($_SESSION['produtos'])) {
-    die("Erro: A sessão de produtos não doi inicializada.");
+    die("Erro: A sessão de produtos não foi inicializada.");
 }
 
 $ids = array_column($_SESSION['produtos'], 'id');

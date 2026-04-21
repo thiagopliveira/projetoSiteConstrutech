@@ -52,13 +52,14 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
     </div>
 
     <!-- HEADER -->
-    <div class="subtitleContainer">
-        <h2>Produto</h2>
-        <h2>Preço</h2>
-        <h2>Tipo</h2>
-        <h2>Quantidade</h2>
-        <h2>Ações</h2>
-    </div>
+   <div class="subtitleContainer">
+    <h2></h2>
+    <h2>Produto</h2>
+    <h2>Preço</h2>
+    <h2>Tipo</h2>
+    <h2>Quantidade</h2>
+    <h2>Ações</h2>
+</div>
 
     <!-- LISTA -->
     <div class="products">
@@ -68,11 +69,13 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 
         <div class="productRow">
 
-            <!-- PRODUTO (imagem + nome juntos) -->
-            <div class="produto-info">
-                <img src="<?= $produto['imagem'] ?>" class="imgProduto">
-                <span><?= $produto['nome'] ?></span>
-            </div>
+            <div>
+    <img src="<?= $produto['imagem'] ?>" class="imgProduto">
+</div>
+
+<div>
+    <?= $produto['nome'] ?>
+</div>
 
             <!-- PREÇO -->
             <div>
@@ -86,13 +89,16 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 
             <!-- QUANTIDADE -->
             <div class="quantidade">
-                <?= $produto['quantidade'] ?>
+    <?= $produto['quantidade'] ?>
 
-                <?php if ($produto['quantidade'] < 3): ?>
-                    <span class="baixo-estoque">Baixo estoque</span>
-                <?php endif; ?>
-            </div>
+    <?php if ($produto['quantidade'] == 0): ?>
+        <span class="sem-estoque">Sem estoque</span>
 
+    <?php elseif ($produto['quantidade'] < 3): ?>
+        <span class="baixo-estoque">Baixo estoque</span>
+
+    <?php endif; ?>
+</div>
             <!-- AÇÕES -->
             <div class="acoes">
                 <a href="detalhes-do-produto.php?id=<?= $produto['id'] ?>">
