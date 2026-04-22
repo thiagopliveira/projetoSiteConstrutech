@@ -177,6 +177,38 @@ input:checked ~ .boxMain{
     align-items: center;
 }
 
+/* Página 404 */
+
+.error-block{
+    text-align: center;
+}
+
+.error-code{
+
+}
+
+.error-message{
+    color: white;
+}
+
+.link-404{
+    background: #007a91;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.link-404 a{
+    text-decoration: none;
+    color: white;
+}
+
+.link-404:hover{
+    background: #084f5e;
+    transition: 0s;
+}
+
 /* LINHAS */
 .productRow{
     gap: 15px;
