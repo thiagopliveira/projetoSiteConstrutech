@@ -52,6 +52,7 @@ $produto = $_SESSION['produtos'][$index];
 
             
         </div>
+        <div class="product-return"><a href="index.php"> Clique aqui para voltar</div>
     </div>
 </main>
 </body>
