@@ -145,7 +145,8 @@ input:checked ~ .boxMain{
 .subtitleContainer,
 .productRow{
     display: grid;
-grid-template-columns: 2.5fr 1fr 1fr 1fr 1fr;    align-items: center;
+    grid-template-columns: 80px 2fr 1fr 1fr 1fr 2fr;
+    align-items: center;
 }
 
 /* HEADER */
