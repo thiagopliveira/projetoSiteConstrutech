@@ -8,9 +8,9 @@ if (isset($_GET['id'])) {
 
         if ((int)$produto['id'] === $id) {
 
-           // diminui 1 da quantidade de
+            // apaga todo o estoque
             if ($_SESSION['produtos'][$index]['quantidade'] > 0) {
-                $_SESSION['produtos'][$index]['quantidade']--;
+                $_SESSION['produtos'][$index]['quantidade'] = 0;
             }
 
             break;
@@ -19,5 +19,5 @@ if (isset($_GET['id'])) {
 }
 
 
-header("Location: index.php?removido=1");
+header("Location: index.php?removidoTudo=1");
 exit;

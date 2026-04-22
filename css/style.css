@@ -10,15 +10,19 @@
 body{
     background: #f5f6fa;
 }
+.boxHeader{
+    display: flex;
+    justify-content: end;
+}
 
 /* SIDEBAR */
 nav{
     position: fixed;
     width: 260px;
     height: 100%;
-     background-color: rgba(2, 217, 255, 0.712);
-    backdrop-filter: blur(10px); /* Blurs what's behind the sidebar */
-    -webkit-backdrop-filter: blur(10px);
+     background-color: rgba(180, 244, 255, 0.712);
+    backdrop-filter: blur(5px); /* Blurs what's behind the sidebar */
+    -webkit-backdrop-filter: blur(5px);
     left: -260px;
     top: 0;
     padding: 20px 0;
@@ -28,7 +32,10 @@ nav{
 
 nav h2{
     padding-left: 20px;
-    color: white;
+    color: rgb(0, 0, 0);
+}
+nav a{
+    color: rgb(0, 0, 0);
 }
 
 /* ABRIR MENU */
@@ -240,6 +247,12 @@ input:checked ~ .boxMain{
 .acoes .remover:hover{
     background: #c23616;
 }
+.acoes .remover-tudo{
+    background: red;
+}
+.acoes.remover-tudo:hover{
+    background: red;
+}
 
 /*Adicionar*/
 .acoes .adicionar{
@@ -271,7 +284,15 @@ input:checked ~ .boxMain{
     border-radius: 4px;
     width: fit-content;
 }
+.aviso-add-estoque{
 
+    background: green;
+    color: white;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 6px;
+    text-align: center;
+}
 /* ALERTA */
 .aviso-removido{
     background: #e84118;

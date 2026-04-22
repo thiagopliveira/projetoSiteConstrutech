@@ -17,12 +17,16 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 <?php require_once 'partials/header.php'; ?>
 <?php require_once 'partials/sideBar.php'; ?>
 
-<?php if (isset($_GET['produtoadd']) && $_GET['produtoadd'] === '1'): ?>
-    <p class="aviso">Produto adicionado com sucesso!!!</p>
+<?php if (isset($_GET['adicionado'])): ?>
+    <p class="aviso-add-estoque">Estoque adicionado!</p>
 <?php endif; ?>
 
 <?php if (isset($_GET['removido'])): ?>
     <p class="aviso-removido">Estoque atualizado!</p>
+<?php endif; ?>
+
+<?php if (isset($_GET['removidoTudo'])): ?>
+    <p class="aviso-removido">Estoque Removido!</p>
 <?php endif; ?>
 
 <main class="boxMain">
@@ -111,6 +115,10 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 
                 <a href="remove.php?id=<?= $produto['id'] ?>" class="remover">
                     -1 Estoque
+                </a>
+
+                <a href="removeAll.php?id=<?= $produto['id'] ?>" class="remover-tudo">
+                    Remover o todo o estoque
                 </a>
 
             </div>
