@@ -1,6 +1,29 @@
 <?php
 require_once 'init.php';
+http_response_code(404);
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erro 404</title>
+    <link rel="stylesheet" href="css/style.php">
+    <style>
+    </style>
+</head>
+<body>
+    <?php require_once 'partials/header.php'; ?>
+    <?php require_once 'partials/sidebar.php'; ?>
 
-print '<h1>Erro 404 - Página não encontrada!!!</h1>';
-
-print '<a href="index.php">Clique aquí para voltar.</a>';
+    <main>
+        <div class="error-block">
+            <P class="error-code">404</P>
+            <h1 class="error-message">Ops... Página não encontrada!</h1>
+            <p>A paágina pode ter sido removida ou você foi encaminhado/a para a página errada.</p>
+            <br>
+            <a href="index.php" class="link-404">clique aqui para voltar</a>
+        </div>
+    </main>
+</body>
+</html>
