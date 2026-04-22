@@ -51,9 +51,10 @@ $produto = $_SESSION['produtos'][$index];
             </div>
 
             
-        </div>
-        <div class="product-return"><a href="index.php"> Clique aqui para voltar</div>
+    <div class="product-return"><a href="index.php"> Clique aqui para voltar</div>
+      
     </div>
 </main>
+<?php require_once 'partials/footer.php'; ?>
 </body>
 </html>

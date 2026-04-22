@@ -1,3 +1,4 @@
+hm
 <?php
 require_once 'init.php';
 
@@ -18,5 +19,10 @@ if (isset($_GET['id'])) {
     }
 }
 
+
 header("Location: index.php?adicionado=1");
 exit;
+
+    
+
+

@@ -46,6 +46,7 @@
             <button type="submit" class="btnSalvar">
                 Enviar
             </button>
+            <div class="product-return"><a href="index.php"> Clique aqui para voltar</div>
 
         </form>
     </div>

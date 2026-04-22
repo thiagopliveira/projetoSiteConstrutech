@@ -157,7 +157,7 @@ input:checked ~ .boxMain{
 .subtitleContainer,
 .productRow{
     display: grid;
-    grid-template-columns: 80px 2fr 1fr 1fr 1fr 2fr;
+    grid-template-columns: 80px 2fr 1fr 1fr 1fr 1fr;
     align-items: center;
 }
 
@@ -206,19 +206,20 @@ input:checked ~ .boxMain{
 }
 
 /* AÇÕES NA DIREITA */
-.productRow > div:nth-child(6),
-.subtitleContainer > h2:nth-child(6){
-    justify-content: flex-end;
-}
+
 .product-return{
-    width: 100px;
-    height: 50px;
-    background-color:#0097b2;
+    background: #0097b2;
     color: white;
-    box-sizing: border-box;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
 }
 .product-return a{
     text-decoration: none;
+    color: white;
 }
 
 /* IMAGEM */
