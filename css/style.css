@@ -1,4 +1,4 @@
-/* RESET */
+/* Configurações padrão */
 *{
     margin: 0;
     padding: 0;
@@ -10,12 +10,13 @@
 body{
     background: #f5f6fa;
 }
+/* Formatação da logo do site */
 .boxHeader{
     display: flex;
     justify-content: end;
 }
 
-/* SIDEBAR */
+/* Ajuste da SideBar */
 nav{
     position: fixed;
     width: 260px;
@@ -30,12 +31,14 @@ nav{
     z-index: 1000;
 }
 
+/* Formatação do título dentro da sideBar */
 nav h2{
     padding-left: 20px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 nav a{
     color: rgb(0, 0, 0);
+    text-decoration: none;
 }
 
 /* ABRIR MENU */
@@ -206,6 +209,16 @@ input:checked ~ .boxMain{
 .productRow > div:nth-child(6),
 .subtitleContainer > h2:nth-child(6){
     justify-content: flex-end;
+}
+.product-return{
+    width: 100px;
+    height: 50px;
+    background-color:#0097b2;
+    color: white;
+    box-sizing: border-box;
+}
+.product-return a{
+    text-decoration: none;
 }
 
 /* IMAGEM */
