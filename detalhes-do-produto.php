@@ -31,14 +31,27 @@ $produto = $_SESSION['produtos'][$index];
     require_once 'partials/header.php';
     require_once 'partials/sideBar.php';
     ?>
-    <main>
-    <img src="<?= $produto['imagem'] ?>" alt="<?= $produto['nome'] ?>">
-    
-    <div class="caracdoproduto">
-        <h3><?= $produto['nome'] ?></h3>
-        <p><strong>Preço:</strong> <?= $produto['preco'] ?></p>
-        <p><strong>Categoria:</strong> <?= $produto['categoria'] ?></p>
-        <p><strong>Descrição:</strong> <?= $produto['descricao'] ?></p>
+    <main class="boxMain">
+    <div class="titleBox">
+        <h1>Produto</h1>
+    </div>
+    <div class="product-container">
+        <div class="product-image-section">
+            <img src="<?= $produto['imagem'] ?>" alt="<?= $produto['nome'] ?>" class="main-img">
+        </div>
+
+        <div class="product-info-section">
+            <h1><?= $produto['nome'] ?></h1>
+            <p class="price">R$ <?= number_format($produto['preco'], 2, ',', '.') ?></p>
+            
+            <div class="details">
+                <p><strong>Tipo:</strong> <?= $produto['categoria'] ?></p>
+                <p><strong>QTD Estoque:</strong> <?= $produto['quantidade'] ?? 'Consultar' ?></p>
+                <p class="description"><?= $produto['descricao'] ?></p>
+            </div>
+
+            
+        </div>
     </div>
 </main>
 </body>

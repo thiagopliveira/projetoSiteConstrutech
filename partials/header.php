@@ -9,7 +9,7 @@
 <body>
     <body>
     <header class="boxHeader">
-        <div><img src="#"></div>
+        <div><img src="img/logoSite.png" width="200"></div>
     </header>
     
 </body>
