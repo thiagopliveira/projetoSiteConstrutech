@@ -16,8 +16,7 @@
         <i class="fas fa-bars"></i>
         </label>
     <nav>
-        <label for="close" class="btn-hide-nav">
-            <i class="fas fa-times"></i>
+        <br>
         </label>
         <a href="#" class="nav-brand">Construtech</a>
         <h2>Menu</h2>

@@ -16,7 +16,9 @@ nav{
     position: fixed;
     width: 260px;
     height: 100%;
-    background: #007b94;
+     background-color: rgba(2, 217, 255, 0.712);
+    backdrop-filter: blur(10px); /* Blurs what's behind the sidebar */
+    -webkit-backdrop-filter: blur(10px);
     left: -260px;
     top: 0;
     padding: 20px 0;
@@ -239,6 +241,11 @@ input:checked ~ .boxMain{
     background: #c23616;
 }
 
+/*Adicionar*/
+.acoes .adicionar{
+    background: green;
+}
+
 /* QUANTIDADE */
 .quantidade{
     display: flex;
@@ -335,6 +342,31 @@ textarea{
     border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
+}
+
+.botoes-gerais {
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.botoes-gerais a{
+    text-decoration: none;
+    justify-content: space-between;
+}
+
+.btn-add{
+    padding: 5px;
+    background: green;
+    border-radius: 5px;
+    color: white;
+}
+
+
+.btn-reset{
+    padding: 5px;
+    background: crimson;
+    border-radius: 5px;
+    color: white;
 }
 
 .btnSalvar:hover{

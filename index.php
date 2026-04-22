@@ -105,9 +105,14 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
                     Detalhes
                 </a>
 
+                <a href="add.php?id=<?= $produto['id'] ?>" class="adicionar">
+                    Adicionar Estoque
+                </a>
+
                 <a href="remove.php?id=<?= $produto['id'] ?>" class="remover">
                     -1 Estoque
                 </a>
+
             </div>
 
         </div>
@@ -119,9 +124,11 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 
     <!-- BOTÃO -->
     <div class="botoes-gerais">
-        <a href="form.php" class="btn">Adicionar Novo</a>
+        <a href="form.php" class="btn-add">Adicionar Novo</a>
+        
+    <a href="reset.php" class="btn-reset">Resetar Estoque</a>
     </div>
-    <a href="reset.php" class="btn">Resetar Estoque</a>
+    
 
 </main>
 
