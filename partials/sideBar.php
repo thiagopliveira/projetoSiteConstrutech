@@ -23,7 +23,6 @@
         <ul>
             <li><a href="index.php"><i class="fas fa-products"></i>Produtos</a></li>
             <li><a href="form.php"><i class="fas fa-addProducts"></i>Adicionar Produtos</a></li>
-            <li><a href="#"><i class="fas fa-removeProducts"></i>Remover Produtos</a></li>
             <li><a href="form-contato.php"><i class="fas fa-contact"></i>Formulário para contato</a></li>
         </ul>
 

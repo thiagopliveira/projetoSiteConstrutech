@@ -125,6 +125,10 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
                     <img src="img/simbolo-editar.png" width ="20px" alt="" srcset="">
                 </a>
 
+                <a href="remove-item.php?id=<?= $produto['id'] ?>" class="">
+                    <img src="#" width ="20px" alt="" srcset="">
+                </a>
+
             </div>
 
         </div>
