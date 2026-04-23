@@ -1,4 +1,3 @@
-
 <?php
 require_once 'init.php';
 
@@ -9,10 +8,10 @@ if (isset($_GET['id'])) {
 
         if ((int)$produto['id'] === $id) {
 
-            // adiciona 1 da quantidade
-            
-                $_SESSION['produtos'][$index]['quantidade']++;
-            
+            // apaga todo o estoque
+            {
+                $_SESSION['produtos'][$index]['quantidade'] = ;
+            }
 
             break;
         }
@@ -20,9 +19,5 @@ if (isset($_GET['id'])) {
 }
 
 
-header("Location: index.php?adicionado=1");
+header("Location: index.php?removidoitem=1");
 exit;
-
-    
-
-
