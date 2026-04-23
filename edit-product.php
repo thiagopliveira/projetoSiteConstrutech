@@ -14,6 +14,60 @@ require_once 'init.php';?>
 </head>
 <body>
 <?php require_once 'partials/header.php'; ?>
-<?php require_once 'partials/sideBar.php'; ?>    
+<?php require_once 'partials/sideBar.php'; ?>
+
+<main class="boxMain">
+
+    <div class="titleBox">
+        <h1>Editar Produto</h1>
+    </div>
+
+    <div class="formContainer">
+        <form method="GET" require_once  class="formProducts">
+
+            <div class="formGroup">
+                <label>Nome do Produto</label>
+                <input type="text" name="nome" required>
+            </div>
+
+            <div class="formGroup">
+                <label>Preço</label>
+                <input type="number" step="0.01" name="preco" required>
+            </div>
+
+            <div class="formGroup">
+                <label>Descrição</label>
+                <textarea name="descricao"></textarea>
+            </div>
+
+            <div class="formGroup">
+                <label>Quantidade</label>
+                <input type="number" name="quantidade" required>
+            </div>
+
+            <div class="formGroup">
+                <label>Categoria</label>
+                <select name="categoria" required>
+                    <?php foreach($categorias as $kcat => $nome): ?>
+                        <option value="<?= $kcat ?>"><?= $nome ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+
+            <div class="formGroup">
+                <label>URL da Imagem</label>
+                <input type="text" name="imagem" placeholder="cole o link da imagem">
+            </div>
+
+            <button type="submit" class="btnSalvar">
+                Salvar Produto
+            </button>
+
+            <div class="product-return"><a href="index.php"> Clique aqui para voltar</div>
+
+        </form>
+    </div>
+
+</main>
 </body>
 </html>
