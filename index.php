@@ -18,15 +18,19 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 <?php require_once 'partials/sideBar.php'; ?>
 
 <?php if (isset($_GET['adicionado'])): ?>
-    <p class="aviso-add-estoque">Estoque adicionado!</p>
+    <p class="aviso-add-estoque">Estoque Adicionado!</p>
 <?php endif; ?>
 
 <?php if (isset($_GET['removido'])): ?>
-    <p class="aviso-removido">Estoque atualizado!</p>
+    <p class="aviso-removido">Estoque Atualizado!</p>
 <?php endif; ?>
 
 <?php if (isset($_GET['removidoTudo'])): ?>
     <p class="aviso-removido">Estoque Removido!</p>
+<?php endif; ?>
+
+<?php if (isset($_GET['deleteitem'])): ?>
+    <p class="aviso-removido">Produto Deletado!</p>
 <?php endif; ?>
 
 <main class="boxMain">
@@ -121,12 +125,13 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
                     Zerar estoque
                 </a>
 
-                <a href="edit-product.php?id=<?= $produto['id'] ?>" class="">
-                    <img src="img/simbolo-editar.png" width ="20px" alt="" srcset="">
+                <a href="edit-product.php?id=<?= $produto['id'] ?>" class="editar">
+                    <img src="img/simbolo-editar2.png" width ="20px" alt="" srcset="">
                 </a>
 
-                <a href="remove-item.php?id=<?= $produto['id'] ?>" class="">
-                    <img src="#" width ="20px" alt="" srcset="">
+                <a href="delete-item.php?id=<?= $produto['id'] ?>" class="delet-produto">
+                    <img src="img/lixeira.png" width ="20px" alt="" srcset="">
+                    
                 </a>
 
             </div>

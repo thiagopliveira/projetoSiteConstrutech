@@ -16,7 +16,7 @@ http_response_code(404);
     <?php require_once 'partials/header.php'; ?>
     <?php require_once 'partials/sidebar.php'; ?>
 
-    <main>
+    <main class="error-main">
         <div class="error-parent">
             <div class="error-block ">
                 <P class="error-code">ERROR-404</P>

@@ -179,14 +179,20 @@ input:checked ~ .boxMain{
 
 /* Página 404 */
 
-.error-parent{
+.erro-main{
+    min-height: calc(100vh - 60px); /* altura da tela menos o header */
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+}
+
+.error-parent{
     width: 100%;
-    overflow: hidden;
-    height: calc(100vh - 60px); /* altura real disponível */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .error-block{
@@ -195,13 +201,15 @@ input:checked ~ .boxMain{
     text-align: center;
     width: 600px;
     max-width: 90%;
-    padding: 30px;
-    color: white;
+    min-height: 400px;
 
-    gap: 70px; 
-    background-image:url(../img/we-threw-out-his-name-photoshopped-v0-1krqpz2r4cn51.jpg);
+    padding: 30px;
+    gap: 40px;
+
+    color: white;
+    background-image: url(../img/we-threw-out-his-name-photoshopped-v0-1krqpz2r4cn51.jpg);
     background-repeat: no-repeat;
-    background-position:center;
+    background-position: center;
     background-size: cover;
     border-radius: 20px;
 }
@@ -323,13 +331,35 @@ input:checked ~ .boxMain{
 .acoes .remover-tudo{
     background: red;
 }
-.acoes.remover-tudo:hover{
-    background: red;
+.acoes .remover-tudo:hover{
+    background: rgb(153, 4, 4);
 }
 
 /*Adicionar*/
 .acoes .adicionar{
     background: green;
+}
+
+.acoes .adicionar:hover{
+    background: rgb(0, 82, 0);
+} 
+
+/*Editar*/
+.acoes .editar{
+    background: rgb(206, 206, 0);
+}
+
+.acoes .editar:hover{
+    background: rgb(134, 134, 0);
+}
+
+/*Deletar Produto*/
+.acoes .delet-produto{
+    background: rgb(112, 28, 28);
+}
+
+.acoes .delet-produto:hover{
+    background: rgb(78, 19, 19);
 }
 
 /* QUANTIDADE */
