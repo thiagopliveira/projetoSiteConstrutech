@@ -118,7 +118,7 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
                 </a>
 
                 <a href="removeAll.php?id=<?= $produto['id'] ?>" class="remover-tudo">
-                    Remover o todo o estoque
+                    Zerar estoque
                 </a>
 
                 <a href="edit-product.php?id=<?= $produto['id'] ?>" class="">

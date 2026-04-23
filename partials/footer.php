@@ -14,7 +14,7 @@ if(isset($_SESSION['produtos']) && is_array($_SESSION['produtos'])) {
 ?>
 <footer class="footer">
     <div class="footer_dentro">
-        <p><img src="img/shopping-cart.png" width="50">QTD de produtos: <strong><?= $totalQuantidade ?></strong> </p>
-        <p><img src="img/money.png" width="50">Valor Total: <strong>R$ <?= number_format($totalValor, 2, ',', '.') ?></strong></p>
+        <p><img src="img/shopping-cart.png" width="50">QTD de produtos: <?= $totalQuantidade ?></p>
+        <p><img src="img/money.png" width="50">Valor Total: R$ <?= number_format($totalValor, 2, ',', '.') ?></p>
     </div>
 </footer>

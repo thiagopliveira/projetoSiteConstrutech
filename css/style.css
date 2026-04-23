@@ -157,11 +157,10 @@ input:checked ~ .boxMain{
 .subtitleContainer,
 .productRow{
     display: grid;
-    grid-template-columns: 80px 2fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 80px 2fr 1fr 1fr 1fr 2fr;
     align-items: center;
 }
 
-/* HEADER */
 .subtitleContainer{
     background: #0097b2;
     color: white;
@@ -175,34 +174,36 @@ input:checked ~ .boxMain{
     font-size: 14px;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 /* Página 404 */
 
 .error-parent{
-    height: 100vh;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    height: calc(100vh - 60px); /* altura real disponível */
 }
 
 .error-block{
     display: grid;
     place-items: center;
-    height: 45vh;
+    text-align: center;
+    width: 600px;
+    max-width: 90%;
+    padding: 30px;
     color: white;
+
+    gap: 70px; 
     background-image:url(../img/we-threw-out-his-name-photoshopped-v0-1krqpz2r4cn51.jpg);
     background-repeat: no-repeat;
     background-position:center;
-    background-size:600px;
+    background-size: cover;
     border-radius: 20px;
-    overflow: hidden;
-    width: 600px;
-    min-height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-    
 }
 
 .error-background{
@@ -515,12 +516,12 @@ textarea{
     color: #444;
 }
  /*footer*/ 
+
  .footer {
     background: #0097b2;
     margin-bottom: 1px;
     padding: 20px 0;
-    bottom: 0;
-    left: 0;
+    border-radius: 10px;
     width: 100%;
     box-sizing: border-box;
     z-index: 1000;
