@@ -21,7 +21,7 @@ nav{
     position: fixed;
     width: 260px;
     height: 100%;
-     background-color: rgba(180, 244, 255, 0.712);
+     background-color: rgba(3, 193, 218, 0.863);
     backdrop-filter: blur(5px); /* Blurs what's behind the sidebar */
     -webkit-backdrop-filter: blur(5px);
     left: -260px;
@@ -179,25 +179,34 @@ input:checked ~ .boxMain{
 
 /* Página 404 */
 
-.error-block{
-    justify-content: space-evenly;
-    display: grid;
-    place-items: center;
-    height: 60vh;
-    color: white;
+.error-parent{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
-.error-background{
-    background:url(../img/we-threw-out-his-name-photoshopped-v0-1krqpz2r4cn51.jpg);
+.error-block{
+    display: grid;
+    place-items: center;
+    height: 45vh;
+    color: white;
+    background-image:url(../img/we-threw-out-his-name-photoshopped-v0-1krqpz2r4cn51.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position:center;
     background-size:600px;
     border-radius: 20px;
     overflow: hidden;
     width: 600px;
     min-height: 400px;
-    margin-left: 400px;
-    margin-right: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+
+.error-background{
+    
 }
 
 .error-code{
