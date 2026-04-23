@@ -90,19 +90,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="formGroup">
                 <label>URL da Imagem</label>
-                <input type="text" name="imagem" placeholder="cole o link da imagem"value="<?= $produto['imagem'] ?>">
+                <input type="text" name="imagem" placeholder="cole o link da imagem"value="<?= $produto['imagem'] ?>" >
             </div>
 
             <button type="submit" class="btnSalvar">
                 Salvar Produto
             </button>
 
-            <div class="product-return"><a href="index.php"> Clique aqui para voltar</div>
+            <div class="product-return"><a href="index.php"> Clique aqui para voltar</a></div>
 
         </form>
     </div>
+</main>
 <?php require_once 'partials/footer.php'; ?>
 
-</main>
+
 </body>
 </html>
