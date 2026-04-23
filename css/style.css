@@ -180,15 +180,32 @@ input:checked ~ .boxMain{
 /* Página 404 */
 
 .error-block{
-    text-align: center;
+    justify-content: space-evenly;
+    display: grid;
+    place-items: center;
+    height: 60vh;
+    color: white;
+}
+
+.error-background{
+    background:url(../img/we-threw-out-his-name-photoshopped-v0-1krqpz2r4cn51.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:600px;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 600px;
+    min-height: 400px;
+    margin-left: 400px;
+    margin-right: 400px;
 }
 
 .error-code{
-
+    margin: 0;
 }
 
 .error-message{
-    color: white;
+    
 }
 
 .link-404{

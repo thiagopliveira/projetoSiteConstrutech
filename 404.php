@@ -17,11 +17,10 @@ http_response_code(404);
     <?php require_once 'partials/sidebar.php'; ?>
 
     <main>
-        <div class="error-block">
-            <P class="error-code">404</P>
+        <div class="error-block error-background">
+            <P class="error-code">ERROR-404</P>
             <h1 class="error-message">Ops... Página não encontrada!</h1>
-            <p>A paágina pode ter sido removida ou você foi encaminhado/a para a página errada.</p>
-            <br>
+            <p>A página pode ter sido removida ou você foi encaminhado/a para a página errada.</p>
             <a href="index.php" class="link-404">clique aqui para voltar</a>
         </div>
     </main>
