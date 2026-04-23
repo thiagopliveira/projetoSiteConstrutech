@@ -5,7 +5,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $ids = array_column($_SESSION['produtos'], 'id');
     $novoId = $ids ? max($ids) + 1 : 1;
 
-    // exemplo simples de salvar (ajuste conforme seu sistema)
     $_SESSION['produtos'][] = [
         'id' => $novoId,
         'nome' => $_POST['nome'],

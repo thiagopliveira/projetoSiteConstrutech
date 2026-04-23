@@ -374,6 +374,9 @@ input:checked ~ .boxMain{
     border-radius: 6px;
     text-align: center;
 }
+.btn-Products{
+    background: simbolo-editar.png;
+}
 
 /* FORM */
 .formContainer{

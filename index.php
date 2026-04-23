@@ -121,6 +121,10 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
                     Remover o todo o estoque
                 </a>
 
+                <a href="edit-product.php?id=<?= $produto['id'] ?>" class="">
+                    <img src="img/simbolo-editar.png" width ="20px" alt="" srcset="">
+                </a>
+
             </div>
 
         </div>
