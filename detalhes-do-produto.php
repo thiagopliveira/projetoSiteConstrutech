@@ -19,6 +19,7 @@ if ($index !== false) {
 $produto = $_SESSION['produtos'][$index]; 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -43,6 +44,7 @@ $produto = $_SESSION['produtos'][$index];
             <div class="product-info-section">
                 <h1><?= $produto['nome'] ?></h1>
                 <p class="price">R$ <?= number_format($produto['preco'], 2, ',', '.') ?></p>
+                
             
                 <div class="details">
                 <p><strong>Tipo:</strong> <?= $produto['categoria'] ?></p>
@@ -51,10 +53,11 @@ $produto = $_SESSION['produtos'][$index];
             </div>
 
             
-       <div class="product-return"><a href="index.php"> Clique aqui para voltar</a></div>
+       <div ><a href="index.php" class="product-return"> Clique aqui para voltar</a></div>
       
     </div>
   </main>
-  <?php require_once 'partials/footer.php'; ?>
+  <?php require_once 'ValorQuantidade.php'; ?>
+  
  </body>
 </html>

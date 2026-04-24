@@ -4,6 +4,7 @@ require_once 'init.php';
 // categoria ativa
 $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
