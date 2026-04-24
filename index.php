@@ -105,6 +105,12 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
         <?php elseif ($produto['quantidade'] < 3): ?>
             <span class="baixo-estoque">Baixo estoque</span>
 
+        <?php elseif ($produto['quantidade'] >=50): ?>
+            <span class="estoque-ideal">Estoque ideal</span>
+        
+        <?php elseif ($produto['quantidade'] >=3 && $produto['quantidade'] <50): ?>
+            <span class="estoque-atencao">Atenção ao estoque</span>    
+
         <?php endif; ?>
     </div>
                 <!-- AÇÕES -->
