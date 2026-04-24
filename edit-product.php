@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 Salvar Produto
             </button>
 
-            <div class="product-return"><a href="index.php"> Clique aqui para voltar</a></div>
+            <div class="product-return-form"><a href="index.php"> Clique aqui para voltar</a></div>
 
         </form>
     </div>
