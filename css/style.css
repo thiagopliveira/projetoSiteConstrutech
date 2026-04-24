@@ -6,7 +6,6 @@
     font-family: Arial, sans-serif;
 }
 
-/* BODY */
 body{
     background: #f5f6fa;
 }
@@ -41,12 +40,10 @@ nav a{
     text-decoration: none;
 }
 
-/* ABRIR MENU */
 input:checked ~ nav{
     left: 0;
 }
 
-/* BOTÃO MENU */
 .btn-show-nav{
     position: fixed;
     top: 20px;
@@ -71,7 +68,7 @@ input:checked ~ nav{
     display: none;
 }
 
-/* LOGO */
+/* Logo */
 .nav-brand{
     color: white;
     font-size: 20px;
@@ -79,7 +76,6 @@ input:checked ~ nav{
     display: block;
 }
 
-/* MENU */
 nav ul li{
     list-style: none;
 }
@@ -96,7 +92,7 @@ nav ul li a:hover{
     color: white;
 }
 
-/* CONTEÚDO */
+/* Conteúdo */
 .boxMain{
     margin-left: 0;
     padding: 80px 40px;
@@ -107,7 +103,6 @@ input:checked ~ .boxMain{
     margin-left: 260px;
 }
 
-/* HEADER */
 .titleBox{
     background: #0097b2;
     padding: 20px;
@@ -115,7 +110,6 @@ input:checked ~ .boxMain{
     border-radius: 8px;
 }
 
-/* FILTROS */
 .filtros{
     display: flex;
     gap: 10px;
@@ -144,7 +138,7 @@ input:checked ~ .boxMain{
     font-weight: bold;
 }
 
-/* TABELA */
+/* Tabela de produtos */
 .products{
     margin-top: 10px;
     background: white;
@@ -153,7 +147,7 @@ input:checked ~ .boxMain{
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-/* GRID PADRÃO (HEADER + LINHAS) */
+/* Grid  */
 .subtitleContainer,
 .productRow{
     display: grid;
@@ -214,17 +208,15 @@ input:checked ~ .boxMain{
     border-radius: 20px;
 }
 
-.error-background{
     
-}
+
 
 .error-code{
     margin: 0;
 }
 
-.error-message{
     
-}
+
 
 .link-404{
     background: #007a91;
@@ -244,7 +236,7 @@ input:checked ~ .boxMain{
     transition: 0s;
 }
 
-/* LINHAS */
+/* Linhas */
 .productRow{
     gap: 15px;
     padding: 15px;
@@ -256,13 +248,13 @@ input:checked ~ .boxMain{
     background: #f1f2f6;
 }
 
-/* CADA COLUNA */
+/* Cada coluna */
 .productRow > div{
     display: flex;
     align-items: center;
 }
 
-/* CENTRALIZA COLUNAS */
+/* Centralização de colunas */
 .productRow > div:nth-child(3),
 .productRow > div:nth-child(4),
 .productRow > div:nth-child(5),
@@ -272,7 +264,6 @@ input:checked ~ .boxMain{
     justify-content: center;
 }
 
-/* AÇÕES NA DIREITA */
 
 .product-return{
     background: #0097b2;
@@ -289,7 +280,7 @@ input:checked ~ .boxMain{
     color: white;
 }
 
-/* IMAGEM */
+
 .imgProduto{
     width: 80px;
     height: 80px;
@@ -298,7 +289,7 @@ input:checked ~ .boxMain{
     border: 1px solid #eee;
 }
 
-/* AÇÕES */
+
 .acoes{
     display: flex;
     flex-direction: column;
@@ -320,7 +311,6 @@ input:checked ~ .boxMain{
     background: #007a91;
 }
 
-/* BOTÃO REMOVER */
 .acoes .remover{
     background: #e84118;
 }
@@ -335,7 +325,6 @@ input:checked ~ .boxMain{
     background: rgb(153, 4, 4);
 }
 
-/*Adicionar*/
 .acoes .adicionar{
     background: green;
 }
@@ -344,7 +333,6 @@ input:checked ~ .boxMain{
     background: rgb(0, 82, 0);
 } 
 
-/*Editar*/
 .acoes .editar{
     background: rgb(206, 206, 0);
 }
@@ -353,7 +341,6 @@ input:checked ~ .boxMain{
     background: rgb(134, 134, 0);
 }
 
-/*Deletar Produto*/
 .acoes .delet-produto{
     background: rgb(112, 28, 28);
 }
@@ -362,14 +349,12 @@ input:checked ~ .boxMain{
     background: rgb(78, 19, 19);
 }
 
-/* QUANTIDADE */
 .quantidade{
     display: flex;
     flex-direction: column;
     gap: 4px;
 }
 
-/* BAIXO ESTOQUE */
 .baixo-estoque{
     background: #fbc531;
     color: #2f3640;
@@ -396,7 +381,6 @@ input:checked ~ .boxMain{
     border-radius: 6px;
     text-align: center;
 }
-/* ALERTA */
 .aviso-removido{
     background: #e84118;
     color: white;
@@ -409,7 +393,6 @@ input:checked ~ .boxMain{
     background: simbolo-editar.png;
 }
 
-/* FORM */
 .formContainer{
     display: flex;
     justify-content: center;
