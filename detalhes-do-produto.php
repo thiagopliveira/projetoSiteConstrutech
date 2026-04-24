@@ -24,7 +24,7 @@ $produto = $_SESSION['produtos'][$index];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deatlhes do Produto</title>
+    <title>Detalhes do Produto</title>
 </head>
 <body>
     <?php
