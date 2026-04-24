@@ -18,7 +18,7 @@
       <nav>
         <br>
         </label>
-        <a href="#" class="nav-brand">Construtech</a>
+        <a href="#" class="nav-brand"><?=$nomeLoja ?></a>
         <h2>Menu</h2>
         <ul>
             <li><a href="index.php"><i class="fas fa-products"></i>Produtos</a></li>

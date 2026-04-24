@@ -25,7 +25,7 @@ $produto = $_SESSION['produtos'][$index];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes do Produto</title>
+    <title>Detalhes <?=$produto['nome'] ?> - <?=$nomeLoja ?></title>
 </head>
 <body>
     <?php
@@ -53,11 +53,11 @@ $produto = $_SESSION['produtos'][$index];
             </div>
 
             
-       <div ><a href="index.php" class="product-return"> Clique aqui para voltar</a></div>
+       <div class="product-return" ><a href="index.php"> Clique aqui para voltar</a></div>
       
     </div>
   </main>
-  <?php require_once 'ValorQuantidade.php'; ?>
+  <?php require_once 'partials/ValorQuantidade.php'; ?>
   
  </body>
 </html>
