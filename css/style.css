@@ -355,11 +355,11 @@ input:checked ~ .boxMain{
 
 /*Deletar Produto*/
 .acoes .delet-produto{
-    background: rgb(112, 28, 28);
+    background: rgb(194, 19, 54);
 }
 
 .acoes .delet-produto:hover{
-    background: rgb(78, 19, 19);
+    background: rgb(170, 15, 46);
 }
 
 /* QUANTIDADE */
