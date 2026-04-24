@@ -32,29 +32,29 @@ $produto = $_SESSION['produtos'][$index];
     require_once 'partials/sideBar.php';
     ?>
     <main class="boxMain">
-    <div class="titleBox">
+     <div class="titleBox">
         <h1>Produto</h1>
-    </div>
+     </div>
     <div class="product-container">
         <div class="product-image-section">
             <img src="<?= $produto['imagem'] ?>" alt="<?= $produto['nome'] ?>" class="main-img">
-        </div>
+            </div>
 
-        <div class="product-info-section">
-            <h1><?= $produto['nome'] ?></h1>
-            <p class="price">R$ <?= number_format($produto['preco'], 2, ',', '.') ?></p>
+            <div class="product-info-section">
+                <h1><?= $produto['nome'] ?></h1>
+                <p class="price">R$ <?= number_format($produto['preco'], 2, ',', '.') ?></p>
             
-            <div class="details">
+                <div class="details">
                 <p><strong>Tipo:</strong> <?= $produto['categoria'] ?></p>
                 <p><strong>QTD Estoque:</strong> <?= $produto['quantidade'] ?? 'Consultar' ?></p>
                 <p class="description"><?= $produto['descricao'] ?></p>
             </div>
 
             
-    <div class="product-return"><a href="index.php"> Clique aqui para voltar</a></div>
+       <div class="product-return"><a href="index.php"> Clique aqui para voltar</a></div>
       
     </div>
-</main>
-<?php require_once 'partials/footer.php'; ?>
-</body>
+  </main>
+  <?php require_once 'partials/footer.php'; ?>
+ </body>
 </html>

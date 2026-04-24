@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +9,13 @@
     <title>Document</title>
 </head>
 <body class="sideBar">
-    <div>
+     <div>
         <input type="checkbox"  class="checkbox" id ="close">
         <div class="overlay"></div>
         <label for="close" class="btn-show-nav">
         <i class="fas fa-bars"></i>
         </label>
-    <nav>
+      <nav>
         <br>
         </label>
         <a href="#" class="nav-brand">Construtech</a>
@@ -28,9 +28,9 @@
 
    
        
-          </nav>
-</div>
-</body>
+       </nav>
+     </div>
+ </body>
 </html>
 
 

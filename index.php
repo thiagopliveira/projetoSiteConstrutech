@@ -35,12 +35,12 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 
 <main class="boxMain">
 
-    <!-- TÍTULO -->
+    <!-- Title -->
     <div class="titleBox">
         <h1>Aba de Produtos</h1>
     </div>
 
-    <!-- FILTROS -->
+    <!-- Filters -->
     <div class="filtros">
 
         <a href="index.php">
@@ -59,7 +59,6 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 
     </div>
 
-    <!-- HEADER -->
    <div class="subtitleContainer">
     <h2></h2>
     <h2>Produto</h2>
@@ -69,7 +68,6 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
     <h2>Ações</h2>
 </div>
 
-    <!-- LISTA -->
     <div class="products">
 
         <?php foreach($_SESSION['produtos'] as $produto): ?>
@@ -85,17 +83,16 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
     <?= $produto['nome'] ?>
 </div>
 
-            <!-- PREÇO -->
+            <!-- Price -->
             <div>
                 R$ <?= number_format($produto['preco'], 2, ',', '.') ?>
             </div>
 
-            <!-- TIPO -->
+            <!-- Type -->
             <div>
                 <?= ucfirst($produto['categoria']) ?>
             </div>
 
-            <!-- QUANTIDADE -->
             <div class="quantidade">
     <?= $produto['quantidade'] ?>
 
@@ -107,7 +104,7 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 
     <?php endif; ?>
 </div>
-            <!-- AÇÕES -->
+            <!-- Actions -->
             <div class="acoes">
                 <a href="detalhes-do-produto.php?id=<?= $produto['id'] ?>">
                     Detalhes
@@ -143,7 +140,7 @@ $categoria_get = isset($_GET['categoria']) ? trim($_GET['categoria']) : '';
 
     </div>
 
-    <!-- BOTÃO -->
+    <!-- Button -->
     <div class="botoes-gerais">
         <a href="form.php" class="btn-add">Adicionar Novo</a>
         
